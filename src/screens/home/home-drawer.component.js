@@ -4,11 +4,13 @@ import { Drawer, DrawerItem } from "@ui-kitten/components";
 import { Text } from "galio-framework";
 
 const DrawerHeader = () => (
-  <Text h1>Header</Text>
-  // <ImageBackground
-  //   style={styles.header}
-  //   source={require("../../assets/image-background.jpeg")}
-  // />
+  <>
+    <Text h1>An App</Text>
+    <ImageBackground
+      style={styles.header}
+      source={require("../../assets/image-background.jpeg")}
+    />
+  </>
 );
 
 export const HomeDrawer = (props) => {

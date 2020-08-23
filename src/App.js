@@ -96,7 +96,7 @@ const App = () => {
     <Provider store={store}>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor={theme["color-danger-300"]}
+        backgroundColor={theme["color-primary-100"]}
       />
       <IconRegistry icons={EvaIconsPack} />
 

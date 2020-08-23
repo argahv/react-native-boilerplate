@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { Text } from "galio-framework";
 import MainLayout from "../components/main-layout.component";
+import { AppRoute } from "./app-routes";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -22,8 +23,8 @@ const TabTwo = (props) => (
 
 const HomeTabsNavigator = ({}) => (
   <Navigator tabBar={(props) => <HomeTabs {...props} />}>
-    <Screen name={"tab1"} component={TabOne} />
-    <Screen name={"tab2"} component={TabTwo} />
+    <Screen name={AppRoute.TAB_ONE} component={TabOne} />
+    <Screen name={AppRoute.TAB_TWO} component={TabTwo} />
   </Navigator>
 );
 

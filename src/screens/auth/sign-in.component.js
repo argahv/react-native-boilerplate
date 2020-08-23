@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import { connect } from "react-redux";
-import { Button } from "galio-framework";
+import { Button, Layout } from "@ui-kitten/components";
 import { Formik } from "formik";
 import { AppRoute } from "../../navigation/app-routes";
 import { FormInput } from "../../components/form-input.component";
-// import { EyeIcon, EyeOffIcon } from "../../assets/icons";
+import { EyeIcon, EyeOffIcon } from "../../assets/icons";
 import { SignInData, SignInSchema } from "../../data/sign-in.model";
 import { loginUser } from "../../redux/global/actions";
 
@@ -63,7 +63,7 @@ const SignInScreen = (props) => {
         icon={passwordVisible ? EyeIcon : EyeOffIcon}
         onIconPress={onPasswordIconPress}
       />
-      {/* <View style={styles.resetPasswordContainer}>
+      <View style={styles.resetPasswordContainer}>
         <Button
           appearance="ghost"
           status="basic"
@@ -71,7 +71,7 @@ const SignInScreen = (props) => {
         >
           Forgot password?
         </Button>
-      </View> */}
+      </View>
       <Button
         style={styles.submitButton}
         onPress={formProps.handleSubmit}
@@ -83,7 +83,7 @@ const SignInScreen = (props) => {
   );
 
   return (
-    <React.Fragment>
+    <Layout>
       <Text style={styles.formTitle}>Login</Text>
       {/* <Layout style={styles.formContainer}> */}
       <Formik
@@ -94,7 +94,7 @@ const SignInScreen = (props) => {
         {renderForm}
       </Formik>
       {/* </Layout> */}
-    </React.Fragment>
+    </Layout>
   );
 };
 
